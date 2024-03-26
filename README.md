@@ -1,1 +1,1 @@
- ![metrics](github-metrix.svg)
+ ![metrics](https://github.com/Kom3ng/Kom3ng/blob/main/github-metrics.svg)
