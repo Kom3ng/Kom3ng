@@ -5,7 +5,7 @@ on:
   schedule: [{cron: "0 2 * * *"}]
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
-  push: {branches: ["master", "main"]}
+  push: {分支: ["master", "main"]}
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -52,11 +52,12 @@ jobs:
     steps:
       - name: Bgm Collection Card
         id: bgm
-        uses: xiaoyvyv/bangumi-action@v1.1.17
+        uses: Kom3ng/bangumi-action@latest
         with:
           github-token: '${{secrets.GITHUB_TOKEN}}'
           bgm-user-id: 'astrack'
           bgm-img-path: 'bgm-card.svg'
+          show-characters: false
 
       - name: Get the output image url
         run: echo "图片生成的链接地址 ${{ steps.bgm.outputs.message }}"
